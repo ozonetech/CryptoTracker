@@ -35,7 +35,7 @@ export default function CoinItem({ marketCoin }) {
 
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate("Coindetains", { coinId: id })}
+      onPress={() => navigation.navigate("Coindetains")}
       style={styles.coinContainer}
     >
       <Image

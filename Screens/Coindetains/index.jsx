@@ -58,27 +58,27 @@ export default function Coindetains() {
     const floatvalue = parseFloat(value) || 0;
     setCoinValue((floatvalue / current_price.usd).toString());
   };
-  const {
-    params: { coinId },
-  } = useRoute();
-  console.log(coinId);
+  // const {
+  //   params: { coinId },
+  // } = useRoute();
+  // console.log(coinId);
 
-  const fetchCoinData = async () => {
-    setLoading(true);
-    const fetchedCoindata = await getCoinDetainedData(coinId);
-    const fetchedCoinMarketData = await getCoinMarketCharts(coinId);
-    setcoindate(fetchedCoindata);
-    setMarketData(fetchedCoinMarketData);
-    setLoading(false);
-  };
+  // const fetchCoinData = async () => {
+  //   setLoading(true);
+  //   const fetchedCoindata = await getCoinDetainedData(coinId);
+  //   const fetchedCoinMarketData = await getCoinMarketCharts(coinId);
+  //   setcoindate(fetchedCoindata);
+  //   setMarketData(fetchedCoinMarketData);
+  //   setLoading(false);
+  // };
 
-  useEffect(() => {
-    fetchCoinData();
-  }, []);
+  // useEffect(() => {
+  //   fetchCoinData();
+  // }, []);
 
-  if (Loading || !coindata || !coinMarketData) {
-    return <ActivityIndicator size={"large"} />;
-  }
+  // if (Loading || !coindata || !coinMarketData) {
+  //   return <ActivityIndicator size={"large"} />;
+  // }
   return (
     <View style={[styles.coindetainScreen, { flex: 1 }]}>
       <StatusBar style="light"></StatusBar>
